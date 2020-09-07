@@ -1,0 +1,85 @@
+INFO:root:Parsing time : 0.005378007888793945 secs
+INFO:helper:Total number of nodes pre-processing: 100
+INFO:helper:Total number of nodes post-processing: 100
+INFO:root:AST_DEPTH : 100
+INFO:helper:CURRENT AST_DEPTH = : 100
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 89
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 79
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 69
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 59
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 49
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 39
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 29
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 19
+INFO:helper:ABSTRACTION_DEPTH : 10
+INFO:helper:abstraction list size : 1
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:root:BYPASSING_ABSTRACTION
+
+
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:Optimizer Calls: 20
+INFO:root:Parsing time : 0.005378007888793945
+INFO:root:PreProcessing time : 0.00035500526428222656
+INFO:root:Analysis time : 0.9971795082092285
+INFO:root:Full time : 1.0508239269256592

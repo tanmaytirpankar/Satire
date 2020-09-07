@@ -1,0 +1,15 @@
+INPUT_FILE : ../large_benchmarks/reduction/Reduction_1024.txt
+
+//-------------------------------------
+VAR : A_9_0
+ABSOLUTE_ERROR : 5.684341886080801e-13
+First-order Error : 5.684341886080801e-13
+REAL_INTERVAL : [-1024, 1024.0]
+FP_INTERVAL : [-1024.0000000000005, 1024.0000000000005]
+//-------------------------------------
+
+Optimizer Calls: 5
+Parsing time : 0.12384319305419922
+PreProcessing time : 0.0019397735595703125
+Analysis time : 41.37438225746155
+Full time : 41.5061821937561

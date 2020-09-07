@@ -1,0 +1,15 @@
+INPUT_FILE : ../large_benchmarks/horner/f_horner_50.txt
+
+//-------------------------------------
+VAR : S_0
+ABSOLUTE_ERROR : 1.0316239824917461e-13
+First-order Error : 1.0316239824917461e-13
+REAL_INTERVAL : [-16.305349322964464, 23.50508351609923]
+FP_INTERVAL : [-16.305349322964567, 23.505083516099333]
+//-------------------------------------
+
+Optimizer Calls: 3
+Parsing time : 0.005440711975097656
+PreProcessing time : 0.00036907196044921875
+Analysis time : 5.346271753311157
+Full time : 5.358445644378662

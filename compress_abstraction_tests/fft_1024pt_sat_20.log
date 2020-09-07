@@ -1,0 +1,21 @@
+INFO:root:Parsing time : 3.552269458770752 secs
+INFO:helper:Total number of nodes pre-processing: 81920
+INFO:helper:Total number of nodes post-processing: 8144
+INFO:root:AST_DEPTH : 30
+INFO:helper:CURRENT AST_DEPTH = : 30
+INFO:helper:ABSTRACTION_DEPTH : 21
+INFO:helper:abstraction list size : 15
+INFO:AnalyzeNode_Serial:Primary cand list=15, Cmpressed cand list=9
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:root:BYPASSING_ABSTRACTION
+
+
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:Optimizer Calls: 18
+INFO:root:Parsing time : 3.552269458770752
+INFO:root:PreProcessing time : 0.019513845443725586
+INFO:root:Analysis time : 20.82234477996826
+INFO:root:Full time : 24.40437412261963

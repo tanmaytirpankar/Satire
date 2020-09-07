@@ -1,0 +1,21 @@
++ for i in '{0..4}'
++ python3 ../src/satern.py --file ../large_benchmarks/FFT_1024/fft_1024pt_sat.txt --logfile fft_1024pt_sat_10.log --std --outfile fft_1024pt_sat_10.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/FFT_1024/fft_1024pt_sat.txt --logfile fft_1024pt_sat_20.log --std --outfile fft_1024pt_sat_20.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/FFT_1024/fft_1024pt_sat.txt --logfile fft_1024pt_sat_30.log --std --outfile fft_1024pt_sat_30.out --compress
++ for i in '{0..4}'
++ python3 ../src/satern.py --file ../large_benchmarks/advect3d/advect3d_20.txt --logfile advect3d_20_10.log --std --outfile advect3d_20_10.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/advect3d/advect3d_20.txt --logfile advect3d_20_20.log --std --outfile advect3d_20_20.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/advect3d/advect3d_20.txt --logfile advect3d_20_30.log --std --outfile advect3d_20_30.out --compress
++ for i in '{0..4}'
++ python3 ../src/satern.py --file ../large_benchmarks/horner/f_horner_50.txt --logfile f_horner_50_10.log --std --outfile f_horner_50_10.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/horner/f_horner_50.txt --logfile f_horner_50_20.log --std --outfile f_horner_50_20.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/horner/f_horner_50.txt --logfile f_horner_50_30.log --std --outfile f_horner_50_30.out --compress
++ for i in '{0..4}'
++ python3 ../src/satern.py --file ../large_benchmarks/reduction/Reduction_1024.txt --logfile Reduction_1024_10.log --std --outfile Reduction_1024_10.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/reduction/Reduction_1024.txt --logfile Reduction_1024_20.log --std --outfile Reduction_1024_20.out --compress
++ python3 ../src/satern.py --file ../large_benchmarks/reduction/Reduction_1024.txt --logfile Reduction_1024_30.log --std --outfile Reduction_1024_30.out --compress
++ for i in '{0..4}'
++ python3 ../src/satern.py --file ../tests/satern-test/dqmom.txt --logfile dqmom_10.log --std --outfile dqmom_10.out --compress
++ python3 ../src/satern.py --file ../tests/satern-test/dqmom.txt --logfile dqmom_20.log --std --outfile dqmom_20.out --compress
++ python3 ../src/satern.py --file ../tests/satern-test/dqmom.txt --logfile dqmom_30.log --std --outfile dqmom_30.out --compress
++ cd ..

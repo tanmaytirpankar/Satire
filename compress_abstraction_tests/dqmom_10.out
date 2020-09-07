@@ -1,0 +1,15 @@
+INPUT_FILE : ../tests/satern-test/dqmom.txt
+
+//-------------------------------------
+VAR : r
+ABSOLUTE_ERROR : 4.996003610813209e-10
+First-order Error : 4.996003610813209e-10
+REAL_INTERVAL : [-900000.0000000002, 900000.0000000002]
+FP_INTERVAL : [-900000.0000000007, 900000.0000000007]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 0.0021746158599853516
+PreProcessing time : 0.0002079010009765625
+Analysis time : 0.10626554489135742
+Full time : 0.16820812225341797

@@ -1,0 +1,755 @@
+Namespace(compress=False, enable_abstraction=True, file='fft_1024pt_sat.txt', force=False, logfile='fft_1024pt_sat_10.log', maxdepth=20, mindepth=10, outfile='fft_1024pt_sat_10.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 21504
+Const expr -> 0
+MaxDepth -> 30
+Post : 3060
+Total number of nodes pre-processing: 81920
+Total number of nodes post-processing: 8144
+Abstraction Enabled... 
+
+CURRENT AST_DEPTH = : 30
+ABSTRACTION_DEPTH : 12
+Canidate List Length: 127
+Gelpia solve =  0.5928142070770264 opCount = 242
+Gelpia solve =  0.05234527587890625 opCount = 31
+Gelpia solve =  0.09882307052612305 opCount = 242
+Gelpia solve =  0.03143024444580078 opCount = 31
+Gelpia solve =  0.07420873641967773 opCount = 242
+Gelpia solve =  0.0392611026763916 opCount = 31
+Gelpia solve =  0.06169629096984863 opCount = 242
+Gelpia solve =  0.023591279983520508 opCount = 31
+Gelpia solve =  0.060765981674194336 opCount = 242
+Gelpia solve =  0.020215988159179688 opCount = 31
+Gelpia solve =  0.06087827682495117 opCount = 242
+Gelpia solve =  0.021825075149536133 opCount = 31
+Gelpia solve =  0.060721635818481445 opCount = 242
+Gelpia solve =  0.03365159034729004 opCount = 31
+Gelpia solve =  0.08778023719787598 opCount = 242
+Gelpia solve =  0.021808862686157227 opCount = 31
+Gelpia solve =  0.06235051155090332 opCount = 242
+Gelpia solve =  0.027692317962646484 opCount = 31
+Gelpia solve =  0.06362247467041016 opCount = 242
+Gelpia solve =  0.021906137466430664 opCount = 31
+Gelpia solve =  0.09176254272460938 opCount = 242
+Gelpia solve =  0.05890488624572754 opCount = 31
+Gelpia solve =  0.08566832542419434 opCount = 242
+Gelpia solve =  0.022348642349243164 opCount = 31
+Gelpia solve =  0.07417678833007812 opCount = 242
+Gelpia solve =  0.021144628524780273 opCount = 31
+Gelpia solve =  0.062465667724609375 opCount = 242
+Gelpia solve =  0.027469158172607422 opCount = 31
+Gelpia solve =  0.06422257423400879 opCount = 242
+Gelpia solve =  0.02245044708251953 opCount = 31
+Gelpia solve =  0.07245779037475586 opCount = 242
+Gelpia solve =  0.0223233699798584 opCount = 31
+Gelpia solve =  0.12778139114379883 opCount = 242
+Gelpia solve =  0.03669404983520508 opCount = 31
+Gelpia solve =  0.09887337684631348 opCount = 242
+Gelpia solve =  0.062072038650512695 opCount = 242
+Gelpia solve =  0.02057504653930664 opCount = 31
+Gelpia solve =  0.06246829032897949 opCount = 242
+Gelpia solve =  0.0366969108581543 opCount = 31
+Gelpia solve =  0.0608525276184082 opCount = 242
+Gelpia solve =  0.01998305320739746 opCount = 31
+Gelpia solve =  0.062329769134521484 opCount = 242
+Gelpia solve =  0.024330615997314453 opCount = 31
+Gelpia solve =  0.06582832336425781 opCount = 242
+Gelpia solve =  0.02155447006225586 opCount = 31
+Gelpia solve =  0.06250834465026855 opCount = 242
+Gelpia solve =  0.02345442771911621 opCount = 31
+Gelpia solve =  0.061089515686035156 opCount = 242
+Gelpia solve =  0.045926570892333984 opCount = 31
+Gelpia solve =  0.07045888900756836 opCount = 242
+Gelpia solve =  0.020534038543701172 opCount = 31
+Gelpia solve =  0.06807470321655273 opCount = 242
+Gelpia solve =  0.06109452247619629 opCount = 242
+Gelpia solve =  0.01954030990600586 opCount = 31
+Gelpia solve =  0.06268668174743652 opCount = 242
+Gelpia solve =  0.019437074661254883 opCount = 31
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 17
+ABSTRACTION_DEPTH : 12
+Canidate List Length: 7
+Gelpia solve =  0.0640106201171875 opCount = 243
+Gelpia solve =  0.021407604217529297 opCount = 31
+Gelpia solve =  0.2714111804962158 opCount = 243
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+Bypassing abstraction
+
+5 17 10
+Gelpia solve =  0.020495891571044922 opCount = 33
+Gelpia solve =  0.01722407341003418 opCount = 7
+
+//-------------------------------------
+VAR : X_10_0_0_real
+ABSOLUTE_ERROR : 0.0003051757815342171
+First-order Error : 0.0003051757815342171
+REAL_INTERVAL : [0, 1024.0]
+FP_INTERVAL : [-0.0003051757815342171, 1024.0003051757815]
+//-------------------------------------
+
+Optimizer Calls: 61
+Parsing time : 3.529555082321167
+
+PreProcessing time : 0.020213842391967773
+
+Analysis time : 6.605684280395508
+
+Full time : 10.378122091293335
+
+Namespace(compress=False, enable_abstraction=True, file='fft_1024pt_sat.txt', force=False, logfile='fft_1024pt_sat_20.log', maxdepth=30, mindepth=20, outfile='fft_1024pt_sat_20.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 21504
+Const expr -> 0
+MaxDepth -> 30
+Post : 3060
+Total number of nodes pre-processing: 81920
+Total number of nodes post-processing: 8144
+Abstraction Enabled... 
+
+CURRENT AST_DEPTH = : 30
+ABSTRACTION_DEPTH : 21
+Canidate List Length: 15
+Gelpia solve =  1.7501130104064941 opCount = 3130
+Gelpia solve =  0.08388042449951172 opCount = 255
+Gelpia solve =  1.7572689056396484 opCount = 3130
+Gelpia solve =  0.06767702102661133 opCount = 255
+Gelpia solve =  1.833833932876587 opCount = 3130
+Gelpia solve =  0.07720565795898438 opCount = 255
+Gelpia solve =  1.999528408050537 opCount = 3130
+Gelpia solve =  0.07169556617736816 opCount = 255
+Gelpia solve =  1.4993231296539307 opCount = 3130
+Gelpia solve =  0.06455397605895996 opCount = 255
+Gelpia solve =  1.8920340538024902 opCount = 3130
+Gelpia solve =  0.084564208984375 opCount = 255
+Gelpia solve =  1.7698230743408203 opCount = 3130
+Gelpia solve =  0.09462404251098633 opCount = 255
+Gelpia solve =  1.826221227645874 opCount = 3130
+Gelpia solve =  0.06630635261535645 opCount = 255
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+Bypassing abstraction
+
+8 30 20
+Gelpia solve =  0.03259539604187012 opCount = 95
+Gelpia solve =  0.04129147529602051 opCount = 15
+
+//-------------------------------------
+VAR : X_10_0_0_real
+ABSOLUTE_ERROR : 0.0003051757815342171
+First-order Error : 0.0003051757815342171
+REAL_INTERVAL : [0, 1024.0]
+FP_INTERVAL : [-0.0003051757815342171, 1024.0003051757815]
+//-------------------------------------
+
+Optimizer Calls: 18
+Parsing time : 3.7071263790130615
+
+PreProcessing time : 0.019531726837158203
+
+Analysis time : 19.601032257080078
+
+Full time : 23.336610555648804
+
+Namespace(compress=False, enable_abstraction=True, file='fft_1024pt_sat.txt', force=False, logfile='fft_1024pt_sat_30.log', maxdepth=40, mindepth=30, outfile='fft_1024pt_sat_30.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 21504
+Const expr -> 0
+MaxDepth -> 30
+Post : 3060
+Total number of nodes pre-processing: 81920
+Total number of nodes post-processing: 8144
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+30 40 30
+Gelpia solve =  1.9627368450164795 opCount = 4001
+Gelpia solve =  4.681552886962891 opCount = 4002
+Gelpia solve =  2.163142681121826 opCount = 4019
+Gelpia solve =  9.255015850067139 opCount = 1025
+Gelpia solve =  6.123677015304565 opCount = 4010
+Gelpia solve =  1.9547431468963623 opCount = 4002
+Gelpia solve =  4.508304595947266 opCount = 4029
+Gelpia solve =  3.37819242477417 opCount = 4077
+Gelpia solve =  8.525130033493042 opCount = 1025
+Gelpia solve =  8.471111059188843 opCount = 1026
+Gelpia solve =  33.39992332458496 opCount = 2049
+Gelpia solve =  4.211544036865234 opCount = 1029
+Gelpia solve =  0.6619110107421875 opCount = 2047
+
+//-------------------------------------
+VAR : X_10_0_0_real
+ABSOLUTE_ERROR : 0.0003051757815342171
+First-order Error : 0.0003051757815342171
+REAL_INTERVAL : [0, 1024.0]
+FP_INTERVAL : [-0.0003051757815342171, 1024.0003051757815]
+//-------------------------------------
+
+Optimizer Calls: 13
+Parsing time : 3.545077085494995
+
+PreProcessing time : 0.019641399383544922
+
+Analysis time : 95.05760931968689
+
+Full time : 98.63160133361816
+
+Namespace(compress=False, enable_abstraction=True, file='advect3d_20.txt', force=False, logfile='advect3d_20_10.log', maxdepth=20, mindepth=10, outfile='advect3d_20_10.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 158255
+Const expr -> 0
+MaxDepth -> 10
+Post : 31
+Total number of nodes pre-processing: 453882
+Total number of nodes post-processing: 66
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 20 10
+Gelpia solve =  0.554833173751831 opCount = 924
+Gelpia solve =  0.08190798759460449 opCount = 102
+
+//-------------------------------------
+VAR : ATHIRD_4_4_4
+ABSOLUTE_ERROR : 1.2096736668051845e-06
+First-order Error : 1.2096736668051845e-06
+REAL_INTERVAL : [2.939387499999988, 5.940925000000015]
+FP_INTERVAL : [2.939386290326321, 5.940926209673682]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 21.60495352745056
+
+PreProcessing time : 0.0847020149230957
+
+Analysis time : 0.6555449962615967
+
+Full time : 22.421897411346436
+
+Namespace(compress=False, enable_abstraction=True, file='advect3d_20.txt', force=False, logfile='advect3d_20_20.log', maxdepth=30, mindepth=20, outfile='advect3d_20_20.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 158255
+Const expr -> 0
+MaxDepth -> 10
+Post : 31
+Total number of nodes pre-processing: 453882
+Total number of nodes post-processing: 66
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 30 20
+Gelpia solve =  0.55240797996521 opCount = 924
+Gelpia solve =  0.09469485282897949 opCount = 102
+
+//-------------------------------------
+VAR : ATHIRD_4_4_4
+ABSOLUTE_ERROR : 1.2096736668051845e-06
+First-order Error : 1.2096736668051845e-06
+REAL_INTERVAL : [2.939387499999988, 5.940925000000015]
+FP_INTERVAL : [2.939386290326321, 5.940926209673682]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 22.615915536880493
+
+PreProcessing time : 0.10035300254821777
+
+Analysis time : 0.6658978462219238
+
+Full time : 23.40463376045227
+
+Namespace(compress=False, enable_abstraction=True, file='advect3d_20.txt', force=False, logfile='advect3d_20_30.log', maxdepth=40, mindepth=30, outfile='advect3d_20_30.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 158255
+Const expr -> 0
+MaxDepth -> 10
+Post : 31
+Total number of nodes pre-processing: 453882
+Total number of nodes post-processing: 66
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 40 30
+Gelpia solve =  0.5574159622192383 opCount = 924
+Gelpia solve =  0.10217666625976562 opCount = 102
+
+//-------------------------------------
+VAR : ATHIRD_4_4_4
+ABSOLUTE_ERROR : 1.2096736668051845e-06
+First-order Error : 1.2096736668051845e-06
+REAL_INTERVAL : [2.939387499999988, 5.940925000000015]
+FP_INTERVAL : [2.939386290326321, 5.940926209673682]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 21.84709620475769
+
+PreProcessing time : 0.08565950393676758
+
+Analysis time : 0.6784186363220215
+
+Full time : 22.635202169418335
+
+Namespace(compress=False, enable_abstraction=True, file='f_horner_50.txt', force=False, logfile='f_horner_50_10.log', maxdepth=20, mindepth=10, outfile='f_horner_50_10.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 51
+Const expr -> 0
+MaxDepth -> 100
+Post : 51
+Total number of nodes pre-processing: 100
+Total number of nodes post-processing: 100
+Abstraction Enabled... 
+
+CURRENT AST_DEPTH = : 100
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.04512643814086914 opCount = 116
+Gelpia solve =  0.013624429702758789 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 89
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.08065319061279297 opCount = 121
+Gelpia solve =  0.017144441604614258 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 79
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.08083033561706543 opCount = 121
+Gelpia solve =  0.018158435821533203 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 69
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.0821840763092041 opCount = 121
+Gelpia solve =  0.01845693588256836 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 59
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.08514595031738281 opCount = 121
+Gelpia solve =  0.02263951301574707 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 49
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.07653331756591797 opCount = 121
+Gelpia solve =  0.01905345916748047 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 39
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.07536602020263672 opCount = 121
+Gelpia solve =  0.020617008209228516 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 29
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.0760948657989502 opCount = 121
+Gelpia solve =  0.016849279403686523 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 19
+ABSTRACTION_DEPTH : 10
+Canidate List Length: 1
+Gelpia solve =  0.07556581497192383 opCount = 121
+Gelpia solve =  0.016136646270751953 opCount = 14
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+Bypassing abstraction
+
+9 19 10
+Gelpia solve =  0.07673978805541992 opCount = 121
+Gelpia solve =  0.01618051528930664 opCount = 14
+
+//-------------------------------------
+VAR : S_0
+ABSOLUTE_ERROR : 0.0001212438651629618
+First-order Error : 0.0001212438651629618
+REAL_INTERVAL : [-152.50118686419052, 151.1079594986667]
+FP_INTERVAL : [-152.50130810805567, 151.10808074253185]
+//-------------------------------------
+
+Optimizer Calls: 20
+Parsing time : 0.0053827762603759766
+
+PreProcessing time : 0.0003476142883300781
+
+Analysis time : 0.9715471267700195
+
+Full time : 1.0021271705627441
+
+Namespace(compress=False, enable_abstraction=True, file='f_horner_50.txt', force=False, logfile='f_horner_50_20.log', maxdepth=30, mindepth=20, outfile='f_horner_50_20.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 51
+Const expr -> 0
+MaxDepth -> 100
+Post : 51
+Total number of nodes pre-processing: 100
+Total number of nodes post-processing: 100
+Abstraction Enabled... 
+
+CURRENT AST_DEPTH = : 100
+ABSTRACTION_DEPTH : 20
+Canidate List Length: 1
+Gelpia solve =  0.11251592636108398 opCount = 391
+Gelpia solve =  0.015985965728759766 opCount = 29
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 79
+ABSTRACTION_DEPTH : 20
+Canidate List Length: 1
+Gelpia solve =  0.25966668128967285 opCount = 396
+Gelpia solve =  0.029268980026245117 opCount = 29
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 59
+ABSTRACTION_DEPTH : 20
+Canidate List Length: 1
+Gelpia solve =  0.24498510360717773 opCount = 396
+Gelpia solve =  0.030417919158935547 opCount = 29
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 39
+ABSTRACTION_DEPTH : 20
+Canidate List Length: 1
+Gelpia solve =  0.24952363967895508 opCount = 396
+Gelpia solve =  0.03234100341796875 opCount = 29
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+Bypassing abstraction
+
+19 30 20
+Gelpia solve =  0.25131964683532715 opCount = 396
+Gelpia solve =  0.03604769706726074 opCount = 29
+
+//-------------------------------------
+VAR : S_0
+ABSOLUTE_ERROR : 6.996273265732041e-05
+First-order Error : 6.996273265732041e-05
+REAL_INTERVAL : [-69.25889324630909, 78.606647433123]
+FP_INTERVAL : [-69.25896320904174, 78.60671739585565]
+//-------------------------------------
+
+Optimizer Calls: 10
+Parsing time : 0.00549006462097168
+
+PreProcessing time : 0.0003688335418701172
+
+Analysis time : 1.2893545627593994
+
+Full time : 1.3001103401184082
+
+Namespace(compress=False, enable_abstraction=True, file='f_horner_50.txt', force=False, logfile='f_horner_50_30.log', maxdepth=40, mindepth=30, outfile='f_horner_50_30.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 51
+Const expr -> 0
+MaxDepth -> 100
+Post : 51
+Total number of nodes pre-processing: 100
+Total number of nodes post-processing: 100
+Abstraction Enabled... 
+
+CURRENT AST_DEPTH = : 100
+ABSTRACTION_DEPTH : 30
+Canidate List Length: 1
+Gelpia solve =  0.27042436599731445 opCount = 816
+Gelpia solve =  0.017981529235839844 opCount = 44
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 69
+ABSTRACTION_DEPTH : 30
+Canidate List Length: 1
+Gelpia solve =  0.5569415092468262 opCount = 821
+Gelpia solve =  0.03795194625854492 opCount = 44
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+CURRENT AST_DEPTH = : 39
+ABSTRACTION_DEPTH : 30
+Canidate List Length: 1
+Gelpia solve =  0.5489404201507568 opCount = 821
+Gelpia solve =  0.04212760925292969 opCount = 44
+
+********* Rebuilding AST post abstracttion ********
+
+Synthesizing expression with fresh FreeVars .... 
+Bypassing abstraction
+
+9 39 30
+Gelpia solve =  0.08591723442077637 opCount = 121
+Gelpia solve =  0.015332460403442383 opCount = 14
+
+//-------------------------------------
+VAR : S_0
+ABSOLUTE_ERROR : 4.699508526086486e-05
+First-order Error : 4.699508526086486e-05
+REAL_INTERVAL : [-71.20164581813943, 69.7206299766303]
+FP_INTERVAL : [-71.20169281322468, 69.72067697171556]
+//-------------------------------------
+
+Optimizer Calls: 8
+Parsing time : 0.0056951045989990234
+
+PreProcessing time : 0.0003731250762939453
+
+Analysis time : 1.6023423671722412
+
+Full time : 1.7053899765014648
+
+Namespace(compress=False, enable_abstraction=True, file='Reduction_1024.txt', force=False, logfile='Reduction_1024_10.log', maxdepth=20, mindepth=10, outfile='Reduction_1024_10.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 2047
+Const expr -> 0
+MaxDepth -> 10
+Post : 2047
+Total number of nodes pre-processing: 1023
+Total number of nodes post-processing: 1023
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 20 10
+Gelpia solve =  3.350053548812866 opCount = 4005
+Gelpia solve =  8.694883823394775 opCount = 4182
+Gelpia solve =  16.769729375839233 opCount = 1025
+Gelpia solve =  6.359567642211914 opCount = 3072
+Gelpia solve =  0.562126636505127 opCount = 1023
+
+//-------------------------------------
+VAR : A_9_0
+ABSOLUTE_ERROR : 0.00030517578125
+First-order Error : 0.00030517578125
+REAL_INTERVAL : [-1024, 1024.0]
+FP_INTERVAL : [-1024.0003051757812, 1024.0003051757812]
+//-------------------------------------
+
+Optimizer Calls: 5
+Parsing time : 0.13039898872375488
+
+PreProcessing time : 0.001802682876586914
+
+Analysis time : 37.134283781051636
+
+Full time : 37.32979655265808
+
+Namespace(compress=False, enable_abstraction=True, file='Reduction_1024.txt', force=False, logfile='Reduction_1024_20.log', maxdepth=30, mindepth=20, outfile='Reduction_1024_20.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 2047
+Const expr -> 0
+MaxDepth -> 10
+Post : 2047
+Total number of nodes pre-processing: 1023
+Total number of nodes post-processing: 1023
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 30 20
+Gelpia solve =  2.998430013656616 opCount = 4005
+Gelpia solve =  8.536465644836426 opCount = 4182
+Gelpia solve =  17.297919511795044 opCount = 1025
+Gelpia solve =  6.375764608383179 opCount = 3072
+Gelpia solve =  0.5898349285125732 opCount = 1023
+
+//-------------------------------------
+VAR : A_9_0
+ABSOLUTE_ERROR : 0.00030517578125
+First-order Error : 0.00030517578125
+REAL_INTERVAL : [-1024, 1024.0]
+FP_INTERVAL : [-1024.0003051757812, 1024.0003051757812]
+//-------------------------------------
+
+Optimizer Calls: 5
+Parsing time : 0.12211775779724121
+
+PreProcessing time : 0.0017273426055908203
+
+Analysis time : 37.14245009422302
+
+Full time : 37.27175211906433
+
+Namespace(compress=False, enable_abstraction=True, file='Reduction_1024.txt', force=False, logfile='Reduction_1024_30.log', maxdepth=40, mindepth=30, outfile='Reduction_1024_30.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 2047
+Const expr -> 0
+MaxDepth -> 10
+Post : 2047
+Total number of nodes pre-processing: 1023
+Total number of nodes post-processing: 1023
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 40 30
+Gelpia solve =  3.0162110328674316 opCount = 4005
+Gelpia solve =  8.465198755264282 opCount = 4182
+Gelpia solve =  17.325934171676636 opCount = 1025
+Gelpia solve =  6.383643627166748 opCount = 3072
+Gelpia solve =  0.5711209774017334 opCount = 1023
+
+//-------------------------------------
+VAR : A_9_0
+ABSOLUTE_ERROR : 0.00030517578125
+First-order Error : 0.00030517578125
+REAL_INTERVAL : [-1024, 1024.0]
+FP_INTERVAL : [-1024.0003051757812, 1024.0003051757812]
+//-------------------------------------
+
+Optimizer Calls: 5
+Parsing time : 0.12752270698547363
+
+PreProcessing time : 0.0017304420471191406
+
+Analysis time : 37.11185431480408
+
+Full time : 37.246681451797485
+
+Namespace(compress=False, enable_abstraction=True, file='dqmom.txt', force=False, logfile='dqmom_10.log', maxdepth=20, mindepth=10, outfile='dqmom_10.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 14
+Const expr -> 0
+MaxDepth -> 10
+Post : 13
+Total number of nodes pre-processing: 40
+Total number of nodes post-processing: 31
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 20 10
+Gelpia solve =  0.07280397415161133 opCount = 98
+Gelpia solve =  0.033980607986450195 opCount = 17
+
+//-------------------------------------
+VAR : r
+ABSOLUTE_ERROR : 0.026822090598566137
+First-order Error : 0.026822090598566137
+REAL_INTERVAL : [-900000.0000000002, 900000.0000000002]
+FP_INTERVAL : [-900000.0268220908, 900000.0268220908]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 0.002161264419555664
+
+PreProcessing time : 0.00021958351135253906
+
+Analysis time : 0.11142563819885254
+
+Full time : 0.14710021018981934
+
+Namespace(compress=False, enable_abstraction=True, file='dqmom.txt', force=False, logfile='dqmom_20.log', maxdepth=30, mindepth=20, outfile='dqmom_20.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 14
+Const expr -> 0
+MaxDepth -> 10
+Post : 13
+Total number of nodes pre-processing: 40
+Total number of nodes post-processing: 31
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 30 20
+Gelpia solve =  0.07062554359436035 opCount = 98
+Gelpia solve =  0.031426429748535156 opCount = 17
+
+//-------------------------------------
+VAR : r
+ABSOLUTE_ERROR : 0.026822090598566137
+First-order Error : 0.026822090598566137
+REAL_INTERVAL : [-900000.0000000002, 900000.0000000002]
+FP_INTERVAL : [-900000.0268220908, 900000.0268220908]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 0.0021359920501708984
+
+PreProcessing time : 0.000244140625
+
+Analysis time : 0.10682296752929688
+
+Full time : 0.12908101081848145
+
+Namespace(compress=False, enable_abstraction=True, file='dqmom.txt', force=False, logfile='dqmom_30.log', maxdepth=40, mindepth=30, outfile='dqmom_30.out', parallel=False, simplify=False, sound=False, std=True)
+Inside Program
+Num LHS exprs -> 14
+Const expr -> 0
+MaxDepth -> 10
+Post : 13
+Total number of nodes pre-processing: 40
+Total number of nodes post-processing: 31
+Abstraction Enabled... 
+
+Bypassing abstraction
+
+10 40 30
+Gelpia solve =  0.07187843322753906 opCount = 98
+Gelpia solve =  0.03304481506347656 opCount = 17
+
+//-------------------------------------
+VAR : r
+ABSOLUTE_ERROR : 0.026822090598566137
+First-order Error : 0.026822090598566137
+REAL_INTERVAL : [-900000.0000000002, 900000.0000000002]
+FP_INTERVAL : [-900000.0268220908, 900000.0268220908]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 0.0021271705627441406
+
+PreProcessing time : 0.00020551681518554688
+
+Analysis time : 0.10946154594421387
+
+Full time : 0.11695647239685059
+

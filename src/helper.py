@@ -9,7 +9,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def getProbeList():
-	return [Globals.symTable[outVar] for outVar in Globals.outVars]
+    return [Globals.symTable[outVar] for outVar in Globals.outVars]
 
 
 def merge( n, node, parent_dict):
@@ -33,7 +33,7 @@ def merge( n, node, parent_dict):
 
 
 	return node
-		
+
 
 def dfs_expression_builder(node, reachable, parent_dict, csetbl, probeList, build):
 
@@ -119,40 +119,39 @@ def expression_builder(probeList, build=True):
 
 
 def pretraverse(node, reachable):
-	
-	for child in node.children:
-		if reachable[child.depth].__contains__(child):
-			pass
-		else:
-			pretraverse(child, reachable)
+    for child in node.children:
+        if reachable[child.depth].__contains__(child):
+            pass
+        else:
+            pretraverse(child, reachable)
 
 	#print(node.depth)
-	reachable[node.depth].add(node)
+    reachable[node.depth].add(node)
 
 def PreProcessAST():
 
-	probeList = getProbeList()
-	reachable = defaultdict(set)
-	
-	rhstbl = {}
-	for k, v in Globals.symTable.items():
-		rhstbl[v] = k
+    probeList = getProbeList()
+    reachable = defaultdict(set)
 
-	for node in probeList:
-		if not reachable[node.depth].__contains__(node):
-			pretraverse(node, reachable)
+    rhstbl = {}
+    for k, v in Globals.symTable.items():
+        rhstbl[v] = k
 
+    for node in probeList:
+        if not reachable[node.depth].__contains__(node):
+            pretraverse(node, reachable)
 	#print("Pre :", len(Globals.symTable))
-	Globals.symTable =	{syms : node for node,syms in rhstbl.items() \
+    
+    Globals.symTable =	{syms : node for node,syms in rhstbl.items() \
 							if reachable[node.depth].__contains__(node)}
-	print("Post :", len(Globals.symTable))
-	prev_numNodes = sum([ len(Globals.depthTable[el]) for el in Globals.depthTable.keys() if el!=0] )
-	Globals.depthTable = reachable
-	curr_numNodes = sum([ len(Globals.depthTable[el]) for el in Globals.depthTable.keys() if el!=0] )
-	print("Total number of nodes pre-processing: {prev}".format(prev=prev_numNodes))
-	print("Total number of nodes post-processing: {curr}".format(curr=curr_numNodes))
-	logger.info("Total number of nodes pre-processing: {prev}".format(prev=prev_numNodes))
-	logger.info("Total number of nodes post-processing: {curr}".format(curr=curr_numNodes))
+    print("Post :", len(Globals.symTable))
+    prev_numNodes = sum([ len(Globals.depthTable[el]) for el in Globals.depthTable.keys() if el!=0] )
+    Globals.depthTable = reachable
+    curr_numNodes = sum([ len(Globals.depthTable[el]) for el in Globals.depthTable.keys() if el!=0] )
+    print("Total number of nodes pre-processing: {prev}".format(prev=prev_numNodes))
+    print("Total number of nodes post-processing: {curr}".format(curr=curr_numNodes))
+    logger.info("Total number of nodes pre-processing: {prev}".format(prev=prev_numNodes))
+    logger.info("Total number of nodes post-processing: {curr}".format(curr=curr_numNodes))
 
 def filterCandidate(bdmin, bdmax, dmax):
 	return list(filter( lambda x:x.depth >= bdmin and x.depth <= bdmax ,\

@@ -128,7 +128,7 @@ def simplify_with_abstraction(sel_candidate_list, argList, maxdepth, force=False
 	del obj
 	if final:
 		#for k,v in results.items():
-		#	print(k.f_expression)
+			#print(k.f_expression)
 		return results
 
 	abstractNodes(results)
@@ -146,40 +146,42 @@ def full_analysis(probeList, argList, maxdepth):
 
 def	ErrorAnalysis(argList):
 
-	absCount = 1
-	probeList = helper.getProbeList()
-	maxdepth = max([node.depth for node in probeList])
+    absCount = 1
+    probeList = helper.getProbeList()
+    maxdepth = max([node.depth for node in probeList])
 
-	logger.info("AST_DEPTH : {AST_DEPTH}".format(AST_DEPTH = maxdepth))
+    logger.info("AST_DEPTH : {AST_DEPTH}".format(AST_DEPTH = maxdepth))
 
-	bound_mindepth , bound_maxdepth = argList.mindepth, argList.maxdepth
-
-	if ( argList.enable_abstraction ) :
-		print("Abstraction Enabled... \n")
-		while ( maxdepth >= bound_maxdepth and maxdepth >= bound_mindepth):
-			[abs_depth,sel_candidate_list] = helper.selectCandidateNodes(maxdepth, bound_mindepth, bound_maxdepth)
-			print("Canidate List Length:", len(sel_candidate_list))
-			if ( len(sel_candidate_list) > 0 ):
-				absCount += 1
-				results = simplify_with_abstraction(sel_candidate_list, argList, maxdepth)
-				maxopCount = results.get("maxOpCount", 1000)
-				probeList = helper.getProbeList()
-				maxdepth = max([node.depth for node in probeList]) -1
-				if (maxopCount > 1000 and maxdepth > 8 and bound_mindepth > 5):
-					bound_maxdepth = maxdepth if bound_maxdepth > maxdepth else bound_maxdepth - 2 if bound_maxdepth - bound_mindepth > 4 else bound_maxdepth
-					bound_mindepth = bound_mindepth - 2 if bound_maxdepth - bound_mindepth > 4 else bound_mindepth
-				elif maxdepth <= bound_maxdepth and maxdepth > bound_mindepth:
-					bound_maxdepth = maxdepth
-					assert(bound_maxdepth >= bound_mindepth)
-			else:
-				break
-		print("Bypassing abstraction\n")
-		print(maxdepth, bound_maxdepth, bound_mindepth)
-		#print("Expr->", probeList[0].f_expression)
-		logger.info("BYPASSING_ABSTRACTION\n\n")
-		return full_analysis(probeList, argList, maxdepth)
-	else:
-		return full_analysis(probeList, argList, maxdepth)
+    bound_mindepth , bound_maxdepth = argList.mindepth, argList.maxdepth
+    for k,v in Globals.symTable.items():
+        print("Key:", k, "Value:", v)
+    if ( argList.enable_abstraction ) :
+        print("Abstraction Enabled... \n")
+        while ( maxdepth >= bound_maxdepth and maxdepth >= bound_mindepth):
+			
+            [abs_depth,sel_candidate_list] = helper.selectCandidateNodes(maxdepth, bound_mindepth, bound_maxdepth)
+            print("Canidate List Length:", len(sel_candidate_list))
+            if ( len(sel_candidate_list) > 0 ):
+                absCount += 1
+                results = simplify_with_abstraction(sel_candidate_list, argList, maxdepth)
+                maxopCount = results.get("maxOpCount", 1000)
+                probeList = helper.getProbeList()
+                maxdepth = max([node.depth for node in probeList]) -1
+                if (maxopCount > 1000 and maxdepth > 8 and bound_mindepth > 5):
+                    bound_maxdepth = maxdepth if bound_maxdepth > maxdepth else bound_maxdepth - 2 if bound_maxdepth - bound_mindepth > 4 else bound_maxdepth
+                    bound_mindepth = bound_mindepth - 2 if bound_maxdepth - bound_mindepth > 4 else bound_mindepth
+                elif maxdepth <= bound_maxdepth and maxdepth > bound_mindepth:
+                    bound_maxdepth = maxdepth
+                    assert(bound_maxdepth >= bound_mindepth)
+            else:
+                break
+        print("Bypassing abstraction\n")
+        print(maxdepth, bound_maxdepth, bound_mindepth)
+        #print("Expr->", probeList[0].f_expression)
+        logger.info("BYPASSING_ABSTRACTION\n\n")
+        return full_analysis(probeList, argList, maxdepth)
+    else:
+        return full_analysis(probeList, argList, maxdepth)
 	
 
 

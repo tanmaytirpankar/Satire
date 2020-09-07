@@ -1,0 +1,33 @@
+INFO:root:Parsing time : 0.0056951045989990234 secs
+INFO:helper:Total number of nodes pre-processing: 100
+INFO:helper:Total number of nodes post-processing: 100
+INFO:root:AST_DEPTH : 100
+INFO:helper:CURRENT AST_DEPTH = : 100
+INFO:helper:ABSTRACTION_DEPTH : 30
+INFO:helper:abstraction list size : 1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 69
+INFO:helper:ABSTRACTION_DEPTH : 30
+INFO:helper:abstraction list size : 1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:helper:CURRENT AST_DEPTH = : 39
+INFO:helper:ABSTRACTION_DEPTH : 30
+INFO:helper:abstraction list size : 1
+INFO:root:
+********* Rebuilding AST post abstracttion ********
+
+INFO:root:Synthesizing expression with fresh FreeVars .... 
+INFO:root:BYPASSING_ABSTRACTION
+
+
+INFO:root:Optimizer Calls: 8
+INFO:root:Parsing time : 0.0056951045989990234
+INFO:root:PreProcessing time : 0.0003731250762939453
+INFO:root:Analysis time : 1.6023423671722412
+INFO:root:Full time : 1.7053899765014648

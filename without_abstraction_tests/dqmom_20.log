@@ -1,0 +1,9 @@
+INFO:root:Parsing time : 0.0021734237670898438 secs
+INFO:helper:Total number of nodes pre-processing: 40
+INFO:helper:Total number of nodes post-processing: 31
+INFO:root:AST_DEPTH : 10
+INFO:root:Optimizer Calls: 2
+INFO:root:Parsing time : 0.0021734237670898438
+INFO:root:PreProcessing time : 0.00021457672119140625
+INFO:root:Analysis time : 0.10907697677612305
+INFO:root:Full time : 0.11655688285827637

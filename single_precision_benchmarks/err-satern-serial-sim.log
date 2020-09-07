@@ -1,0 +1,20 @@
++ for i in '{0..4}'
++ python3 ../src/satern.py --file fft_1024pt_sat.txt --enable-abstraction --mindepth 10 --maxdepth 20 --logfile fft_1024pt_sat_10.log --std --outfile fft_1024pt_sat_10.out
++ python3 ../src/satern.py --file fft_1024pt_sat.txt --enable-abstraction --mindepth 20 --maxdepth 30 --logfile fft_1024pt_sat_20.log --std --outfile fft_1024pt_sat_20.out
++ python3 ../src/satern.py --file fft_1024pt_sat.txt --enable-abstraction --mindepth 30 --maxdepth 40 --logfile fft_1024pt_sat_30.log --std --outfile fft_1024pt_sat_30.out
++ for i in '{0..4}'
++ python3 ../src/satern.py --file advect3d_20.txt --enable-abstraction --mindepth 10 --maxdepth 20 --logfile advect3d_20_10.log --std --outfile advect3d_20_10.out
++ python3 ../src/satern.py --file advect3d_20.txt --enable-abstraction --mindepth 20 --maxdepth 30 --logfile advect3d_20_20.log --std --outfile advect3d_20_20.out
++ python3 ../src/satern.py --file advect3d_20.txt --enable-abstraction --mindepth 30 --maxdepth 40 --logfile advect3d_20_30.log --std --outfile advect3d_20_30.out
++ for i in '{0..4}'
++ python3 ../src/satern.py --file f_horner_50.txt --enable-abstraction --mindepth 10 --maxdepth 20 --logfile f_horner_50_10.log --std --outfile f_horner_50_10.out
++ python3 ../src/satern.py --file f_horner_50.txt --enable-abstraction --mindepth 20 --maxdepth 30 --logfile f_horner_50_20.log --std --outfile f_horner_50_20.out
++ python3 ../src/satern.py --file f_horner_50.txt --enable-abstraction --mindepth 30 --maxdepth 40 --logfile f_horner_50_30.log --std --outfile f_horner_50_30.out
++ for i in '{0..4}'
++ python3 ../src/satern.py --file Reduction_1024.txt --enable-abstraction --mindepth 10 --maxdepth 20 --logfile Reduction_1024_10.log --std --outfile Reduction_1024_10.out
++ python3 ../src/satern.py --file Reduction_1024.txt --enable-abstraction --mindepth 20 --maxdepth 30 --logfile Reduction_1024_20.log --std --outfile Reduction_1024_20.out
++ python3 ../src/satern.py --file Reduction_1024.txt --enable-abstraction --mindepth 30 --maxdepth 40 --logfile Reduction_1024_30.log --std --outfile Reduction_1024_30.out
++ for i in '{0..4}'
++ python3 ../src/satern.py --file dqmom.txt --enable-abstraction --mindepth 10 --maxdepth 20 --logfile dqmom_10.log --std --outfile dqmom_10.out
++ python3 ../src/satern.py --file dqmom.txt --enable-abstraction --mindepth 20 --maxdepth 30 --logfile dqmom_20.log --std --outfile dqmom_20.out
++ python3 ../src/satern.py --file dqmom.txt --enable-abstraction --mindepth 30 --maxdepth 40 --logfile dqmom_30.log --std --outfile dqmom_30.out

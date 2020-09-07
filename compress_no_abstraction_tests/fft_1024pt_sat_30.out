@@ -1,0 +1,15 @@
+INPUT_FILE : ../large_benchmarks/FFT_1024/fft_1024pt_sat.txt
+
+//-------------------------------------
+VAR : X_10_0_0_real
+ABSOLUTE_ERROR : 8.526512829121202e-13
+First-order Error : 8.526512829121202e-13
+REAL_INTERVAL : [0, 1024.0]
+FP_INTERVAL : [-8.526512829121202e-13, 1024.000000000001]
+//-------------------------------------
+
+Optimizer Calls: 13
+Parsing time : 3.3480095863342285
+PreProcessing time : 0.020344018936157227
+Analysis time : 90.63906526565552
+Full time : 94.01661896705627

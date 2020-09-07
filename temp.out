@@ -1,0 +1,15 @@
+INPUT_FILE : single_precision_benchmarks/dqmom.txt
+
+//-------------------------------------
+VAR : r
+ABSOLUTE_ERROR : 0.026822090598566137
+First-order Error : 0.026822090598566137
+REAL_INTERVAL : [-900000.0000000002, 900000.0000000002]
+FP_INTERVAL : [-900000.0268220908, 900000.0268220908]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 0.003878355026245117
+PreProcessing time : 0.00026607513427734375
+Analysis time : 0.4287285804748535
+Full time : 0.47019124031066895

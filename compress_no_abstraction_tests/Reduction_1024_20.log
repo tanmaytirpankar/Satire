@@ -1,0 +1,10 @@
+INFO:root:Parsing time : 0.11769509315490723 secs
+INFO:helper:Total number of nodes pre-processing: 1023
+INFO:helper:Total number of nodes post-processing: 1023
+INFO:root:AST_DEPTH : 10
+INFO:AnalyzeNode_Serial:Primary cand list=1, Cmpressed cand list=1
+INFO:root:Optimizer Calls: 5
+INFO:root:Parsing time : 0.11769509315490723
+INFO:root:PreProcessing time : 0.0016715526580810547
+INFO:root:Analysis time : 35.041855573654175
+INFO:root:Full time : 35.16652488708496

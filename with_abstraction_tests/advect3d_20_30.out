@@ -1,0 +1,15 @@
+INPUT_FILE : ../large_benchmarks/advect3d/advect3d_20.txt
+
+//-------------------------------------
+VAR : ATHIRD_4_4_4
+ABSOLUTE_ERROR : 1.1052163351177344e-14
+First-order Error : 1.1052163351177344e-14
+REAL_INTERVAL : [2.939387499999988, 5.940925000000015]
+FP_INTERVAL : [2.939387499999977, 5.940925000000026]
+//-------------------------------------
+
+Optimizer Calls: 2
+Parsing time : 21.212798833847046
+PreProcessing time : 0.08490729331970215
+Analysis time : 0.6648166179656982
+Full time : 21.984824180603027

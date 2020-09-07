@@ -1,0 +1,15 @@
+INPUT_FILE : fft_1024pt_sat.txt
+
+//-------------------------------------
+VAR : X_10_0_0_real
+ABSOLUTE_ERROR : 0.0003051757815342171
+First-order Error : 0.0003051757815342171
+REAL_INTERVAL : [0, 1024.0]
+FP_INTERVAL : [-0.0003051757815342171, 1024.0003051757815]
+//-------------------------------------
+
+Optimizer Calls: 18
+Parsing time : 3.7071263790130615
+PreProcessing time : 0.019531726837158203
+Analysis time : 19.601032257080078
+Full time : 23.336610555648804
