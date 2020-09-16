@@ -10,7 +10,8 @@ import sys
 
 import Globals
 import time
-
+from pprint import pformat
+logger = logging.getLogger(__name__)
 
 class Sparser(object):
 
@@ -244,6 +245,7 @@ class Sparser(object):
 		"""
 		expr	:	term ((PLUS | MINUS) term)*
 		"""
+
 		node = self.intv_term()
 
 		while self.current_token.type in (PLUS, MINUS):
@@ -281,7 +283,8 @@ class Sparser(object):
 			#	Globals.constTable[token.value] = Num(token)
 			# Globals.constTable[token.value] = Globals.constTable.get(token.value, Num(token))
 			# return Globals.constTable[token.value]
-			return Num(token)
+			node = Num(token)
+			return node
 		elif token.type == LPAREN:
 			self.consume(LPAREN)
 			node = self.intv_expr()

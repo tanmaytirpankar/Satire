@@ -17,6 +17,9 @@ from ASTtypes import *
 import helper 
 
 import logging
+DEBUG_LEVEL_ERR_ANALYSIS=9
+DEBUG_LEVEL_PARSER=8
+
 
 def parseArguments():
 	parser = argparse.ArgumentParser()
@@ -41,6 +44,8 @@ def parseArguments():
 	parser.add_argument('--simplify', help='Simplify expression -> could be costly for very large expressions',
 										default=False, action='store_true')
 	parser.add_argument('--logfile', help='Python logging file name -> default is default.log', default='default.log')
+	parser.add_argument('--loglevel', help='Python logging level -> default level is "INFO" which has value 20',
+						default=20, type=int)
 	parser.add_argument('--outfile', help='Name of the output file to write error info', default='outfile.txt')
 	parser.add_argument('--std', help='Print the result to stdout', default=False, action='store_true')
 	parser.add_argument('--sound', help='Turn on analysis for higher order errors', default=False, action='store_true')
@@ -117,10 +122,19 @@ def abstractNodes(results):
 
 
 def simplify_with_abstraction(sel_candidate_list, argList, maxdepth, force=False, final=False):
+	if(final==True):
+		log.debug_err_analysis("Direct Solving")
+	# if argList.loglevel<=9:
+	# 	sel_candidate_str="["
+	# 	for i in range(len(sel_candidate_list)):
+	# 		sel_candidate_str = sel_candidate_str + sel_candidate_list[i].token.value + ","
+	# 	sel_candidate_str = sel_candidate_str + "]"
 
+		# log.debug_err_analysis("Candidate list:" + sel_candidate_str)
 
 	obj = AnalyzeNode_Serial(sel_candidate_list, argList, maxdepth, force)
 	results = obj.start()
+	log.debug_err_analysis("Result of Analysis:" + str(results))
 	if "flag" in results.keys():
 		print("Returned w/o execution-->need to modify bound")
 		return results
@@ -159,6 +173,7 @@ def	ErrorAnalysis(argList):
 		while ( maxdepth >= bound_maxdepth and maxdepth >= bound_mindepth):
 			[abs_depth,sel_candidate_list] = helper.selectCandidateNodes(maxdepth, bound_mindepth, bound_maxdepth)
 			print("Canidate List Length:", len(sel_candidate_list))
+			log.debug_err_analysis("Abs depth:" + str(abs_depth))
 			if ( len(sel_candidate_list) > 0 ):
 				absCount += 1
 				results = simplify_with_abstraction(sel_candidate_list, argList, maxdepth)
@@ -182,6 +197,15 @@ def	ErrorAnalysis(argList):
 		return full_analysis(probeList, argList, maxdepth)
 	
 
+def debug_err_analysis(self, message, *args, **kws):
+    if self.isEnabledFor(DEBUG_LEVEL_ERR_ANALYSIS):
+        # Yes, logger takes its '*args' as 'args'.
+        self._log(DEBUG_LEVEL_ERR_ANALYSIS, message, args, **kws)
+
+def debug_parser(self, message, *args, **kws):
+    if self.isEnabledFor(DEBUG_LEVEL_PARSER):
+        # Yes, logger takes its '*args' as 'args'.
+        self._log(DEBUG_LEVEL_PARSER, message, args, **kws)
 
 if __name__ == "__main__":
 	start_exec_time = time.time()
@@ -191,11 +215,17 @@ if __name__ == "__main__":
 	text = open(argList.file, 'r').read()
 	fout = open(argList.outfile, 'w')
 	##-----------------------
+	logging.addLevelName(DEBUG_LEVEL_ERR_ANALYSIS, "DEBUG_ERR_ANALYSIS")
+	logging.addLevelName(DEBUG_LEVEL_PARSER, "DEBUG_PARSER")
+
 	logging.basicConfig(filename= argList.logfile,
-					level = logging.INFO,
+					level = argList.loglevel,
 					filemode = 'w')
+	logging.Logger.debug_err_analysis = debug_err_analysis
+	logging.Logger.debug_parser = debug_parser
 	logger = logging.getLogger()
 	##-----------------------
+	logger.debug_err_analysis("Hello Im the new logger")
 	start_parse_time = time.time()
 	lexer = Slex()
 	parser = Sparser(lexer)
