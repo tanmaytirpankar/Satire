@@ -20,7 +20,6 @@ import logging
 DEBUG_LEVEL_ERR_ANALYSIS=9
 DEBUG_LEVEL_PARSER=8
 
-
 def parseArguments():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--file', help='Test file name', required=True)
@@ -46,6 +45,8 @@ def parseArguments():
 	parser.add_argument('--logfile', help='Python logging file name -> default is default.log', default='default.log')
 	parser.add_argument('--loglevel', help='Python logging level -> default level is "INFO" which has value 20',
 						default=20, type=int)
+	parser.add_argument('--logabsindex', help='Abstraction number/index for logging the abstraction and error analysis details -> default index is 1',
+						default=1, type=int)
 	parser.add_argument('--outfile', help='Name of the output file to write error info', default='outfile.txt')
 	parser.add_argument('--std', help='Print the result to stdout', default=False, action='store_true')
 	parser.add_argument('--sound', help='Turn on analysis for higher order errors', default=False, action='store_true')
@@ -121,9 +122,9 @@ def abstractNodes(results):
 
 
 
-def simplify_with_abstraction(sel_candidate_list, argList, maxdepth, force=False, final=False):
+def simplify_with_abstraction(sel_candidate_list, argList, maxdepth, abs_count, force=False, final=False):
 	if(final==True):
-		log.debug_err_analysis("Direct Solving")
+		logger.debug_err_analysis("Direct Solving")
 	# if argList.loglevel<=9:
 	# 	sel_candidate_str="["
 	# 	for i in range(len(sel_candidate_list)):
@@ -133,37 +134,41 @@ def simplify_with_abstraction(sel_candidate_list, argList, maxdepth, force=False
 		# log.debug_err_analysis("Candidate list:" + sel_candidate_str)
 
 	obj = AnalyzeNode_Serial(sel_candidate_list, argList, maxdepth, force)
-	results = obj.start()
-	log.debug_err_analysis("Result of Analysis:" + str(results))
+	results = obj.start(argList.logabsindex, abs_count)
+	if (argList.logabsindex == abs_count):
+		logger.debug_err_analysis("\n*************** Result of Analysis ***************\n")
 	if "flag" in results.keys():
 		print("Returned w/o execution-->need to modify bound")
+		if (argList.logabsindex == abs_count):
+			logger.debug_err_analysis(results)
 		return results
 
 	del obj
 	if final:
 		#for k,v in results.items():
 		#	print(k.f_expression)
+		logger.debug_err_analysis("Root nodes:\n" + str(results))
 		return results
 
+	if (argList.logabsindex == abs_count):
+		logger.debug_err_analysis("Nodes to be abstracted:\n"+str(results))
 	abstractNodes(results)
 	rebuildAST()
 	return dict()
 
 
 
-def full_analysis(probeList, argList, maxdepth):
+def full_analysis(probeList, argList, maxdepth, abs_count):
 	#probeList = [it[1] for it in list(filter(lambda x: x[0] in globals.outVars, \
 	#                        [[k,v] for k,v in globals.lhstbl.items()]))]
 
-	return simplify_with_abstraction(probeList, argList, maxdepth, force=True, final=True)
+	return simplify_with_abstraction(probeList, argList, maxdepth, abs_count, force=True, final=True)
 
 
 def	ErrorAnalysis(argList):
-
-	absCount = 1
 	probeList = helper.getProbeList()
 	maxdepth = max([node.depth for node in probeList])
-
+	abs_count=0
 	logger.info("AST_DEPTH : {AST_DEPTH}".format(AST_DEPTH = maxdepth))
 
 	bound_mindepth , bound_maxdepth = argList.mindepth, argList.maxdepth
@@ -172,11 +177,13 @@ def	ErrorAnalysis(argList):
 		print("Abstraction Enabled... \n")
 		while ( maxdepth >= bound_maxdepth and maxdepth >= bound_mindepth):
 			[abs_depth,sel_candidate_list] = helper.selectCandidateNodes(maxdepth, bound_mindepth, bound_maxdepth)
-			print("Canidate List Length:", len(sel_candidate_list))
-			log.debug_err_analysis("Abs depth:" + str(abs_depth))
 			if ( len(sel_candidate_list) > 0 ):
-				absCount += 1
-				results = simplify_with_abstraction(sel_candidate_list, argList, maxdepth)
+				abs_count += 1
+				if (argList.logabsindex==abs_count):
+					logger.debug_err_analysis("Abstraction count:" + str(abs_count))
+					logger.debug_err_analysis("\n*************** Candidate List ***************\n")
+					logger.debug_err_analysis(str(sel_candidate_list))
+				results = simplify_with_abstraction(sel_candidate_list, argList, maxdepth, abs_count)
 				maxopCount = results.get("maxOpCount", 1000)
 				probeList = helper.getProbeList()
 				maxdepth = max([node.depth for node in probeList]) -1
@@ -192,9 +199,9 @@ def	ErrorAnalysis(argList):
 		print(maxdepth, bound_maxdepth, bound_mindepth)
 		#print("Expr->", probeList[0].f_expression)
 		logger.info("BYPASSING_ABSTRACTION\n\n")
-		return full_analysis(probeList, argList, maxdepth)
+		return full_analysis(probeList, argList, maxdepth, abs_count)
 	else:
-		return full_analysis(probeList, argList, maxdepth)
+		return full_analysis(probeList, argList, maxdepth, abs_count)
 	
 
 def debug_err_analysis(self, message, *args, **kws):
@@ -225,7 +232,6 @@ if __name__ == "__main__":
 	logging.Logger.debug_parser = debug_parser
 	logger = logging.getLogger()
 	##-----------------------
-	logger.debug_err_analysis("Hello Im the new logger")
 	start_parse_time = time.time()
 	lexer = Slex()
 	parser = Sparser(lexer)

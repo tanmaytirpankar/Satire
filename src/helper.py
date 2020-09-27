@@ -212,7 +212,7 @@ def selectCandidateNodes(maxdepth, bound_mindepth, bound_maxdepth):
 		print("ABSTRACTION_DEPTH : {abs_depth}".format(abs_depth=abs_depth))
 		logger.info("CURRENT AST_DEPTH = : {ast_depth}".format(ast_depth=maxdepth))
 		logger.info("ABSTRACTION_DEPTH : {abs_depth}".format(abs_depth=abs_depth))
-		logger.info("abstraction list size : {list_size}".format(list_size = len(CandidateList)))
+		logger.info("abstraction list size : {list_size}\n".format(list_size = len(CandidateList)))
 
 		## Check back if filter is required on this
 

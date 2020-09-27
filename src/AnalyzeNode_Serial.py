@@ -67,6 +67,7 @@ class AnalyzeNode_Serial(object):
 		#print(id(node), node.depth, self.parentTracker[node], len(set(node.parents)) , len(self.parent_dict[node]), node.rec_eval(node))
 		#print(node.f_expression, "\n")
 		#print([id(par) for par in node.parents if par not in self.parent_dict[node]], "\n\n")
+
 		return True if self.parentTracker[node] >= len(self.parent_dict[node]) else False
 	
 	#def visit_node_deriv(self, node):
@@ -101,7 +102,7 @@ class AnalyzeNode_Serial(object):
 				self.parentTracker[child_node] += 1
 		self.completed[node.depth].add(node)
 
-	def traverse_ast(self):
+	def traverse_ast(self, log_abs_index, abs_count):
 		next_workList = []
 		curr_depth = 0
 		next_depth = -1
@@ -115,12 +116,14 @@ class AnalyzeNode_Serial(object):
 			    self.visit_node_deriv(node)
 			else:
 			    self.workList.append(node)
-			
 			if(len(self.workList)==0 and next_depth!=-1 and len(self.next_workList)!=0):
 			    nextIter, currIter = utils.partition(self.next_workList, \
 			                                           lambda x:x.depth==next_depth)
 			    self.workList = list(set(currIter))
 			    self.next_workList = list(set(nextIter))
+		if (log_abs_index == abs_count):
+			logger.debug_err_analysis("\n************Backward derivatives*************\n")
+			logger.debug_err_analysis(str(self.bwdDeriv))
 
 
 	def propagate_symbolic(self, node):
@@ -172,14 +175,16 @@ class AnalyzeNode_Serial(object):
 			
 
 
-	def start(self):
+	def start(self, log_abs_index, abs_count):
 
 		local_hashbank = {}
 		mappedList = {}
-		#print("Reached here\n")
+
 		self.trimList = self.probeList
 		maxOpCount = max([seng.count_ops(n.f_expression) for n in self.trimList])
 		abs_depth = max([n.depth for n in self.trimList])
+		if (log_abs_index == abs_count):
+			logger.debug_err_analysis("MaxOpCount:" + str(maxOpCount) + ", MaxDepth:" + str(self.maxdepth) + ", Abstraction depth:" + str(abs_depth))
 		#print(maxOpCount, self.maxdepth, abs_depth)
 		if self.force:
 			pass
@@ -212,7 +217,7 @@ class AnalyzeNode_Serial(object):
 		self.__setup_outputs__()
 
 		#print("Begin Derivatives\n", time.time())
-		self.traverse_ast()
+		self.traverse_ast(log_abs_index, abs_count)
 		#print("Finished Derivatives\n", time.time())
 		self.completed.clear()
 		results =  self.first_order_error()

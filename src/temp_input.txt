@@ -1,0 +1,13 @@
+INPUTS {
+	x  fl64  : (-1.0,  1.0) ;
+    y fl64  :  (2.0, 3.0);
+}
+OUTPUTS {
+	 S ;
+}
+EXPRS {
+v1 rnd64 = (x+y);
+v2 rnd64 = (v1*x);
+v3 rnd64 = (v2-x);
+S rnd64 = (3.5 * v3) ;
+}

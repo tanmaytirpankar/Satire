@@ -86,7 +86,7 @@ class Slex(Lexer):
 
 	@_(r'\n+')
 	def ignore_newline(self, t):
-		self.lineno = t.value.count('\n')
+		self.lineno += len(t.value)
 
 	def error(self, t):
 		print('Line %d: Bad character %r' % (self.lineno, t.value[0]))
